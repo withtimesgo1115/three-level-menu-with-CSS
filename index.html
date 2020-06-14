@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>三级菜单-头部导航条制作</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <!--首先定义一个div作为容器--> 
+    <div class="navbox">
+        <!--注意我使用ul/li作为根菜单 但是没有CSS的话他们是竖直的--> 
+        <ul class="clearfix">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">资讯</a></li>
+            <li><a href="#">web前端</a>
+                <!--这里是二级菜单，仍然用ul/li来表示--> 
+                <ul class="subnav">
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a>
+                        <!--这里是三级菜单，仍然用ul/li来表示--> 
+                        <ul class="threenav">
+                            <li><a href="#">CSS1</a></li>
+                            <li><a href="#">CSS2</a></li>
+                            <li><a href="#">CSS3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">JavaScript</a></li>
+                </ul>
+            </li>
+            <li><a href="#">前端新闻</a></li>
+            <li><a href="#">联系我们</a></li>
+            <li><a href="#">关于我们</a></li>
+        </ul>
+    </div>
+</body>
+</html>
+            
+        
+    
+    

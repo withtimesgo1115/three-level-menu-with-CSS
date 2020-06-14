@@ -1,0 +1,84 @@
+/* unified settings */
+* {
+    padding: 0;
+    margin: 0;  
+}
+
+/*  root div 
+    width should consider the number of li in the root ul and the width of each li
+    height should be the same with following li 
+    margin: set the margin value to make some space with the screen auto will calculate the space left automatically
+*/
+.navbox{
+    width: 960px;
+    height: 40px;
+    margin: 20px auto;
+    background: #08c;
+}
+
+/* 
+this is the root li
+use float: left to make all the elements horizontal rather than vertical
+list-style-type: none removes the dots before them
+line-height make the "line with"
+*/
+.navbox .clearfix li{
+    float: left;
+    width: 160px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 16px;
+    list-style-type: none;
+}
+
+/*
+text-decoration can remove the underlines
+*/
+.navbox ul li a{
+    display: block;
+    color: #fff;
+    background: #08c;
+    text-decoration: none;
+}
+
+/* use pseudo class to make hover effect */
+.navbox ul li a:hover{
+    background: #00bfff;
+}
+
+/* second menu should be hidden at first */
+.subnav{
+    display: none;
+}
+
+/* when user's mouse hover li, we can set our subnav block */
+.navbox ul li:hover .subnav{
+    display: block;
+}
+
+/* third level menu should consider the position */
+.subnav li{
+    position: relative;
+}
+
+/*  top means the upper line is in line with the parent node    
+    left: 160 px also is determined by the parent node's width
+    width is its real width
+*/
+.threenav{
+    position: absolute;
+    top: 0;
+    left: 160px;
+    width: 160px;
+}
+
+/* set hidden at first */
+.subnav .threenav{
+    display: none;
+}
+
+/* when the second menu hover, then block it */
+.subnav li:hover .threenav{
+    display: block;
+}
